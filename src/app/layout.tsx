@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cronômetro com Alarme",
-  description: "Um cronômetro simples com alarme sonoro",
+  title: "TOD, Tempo até a descida",
+  description: "Um cronômetro simples para avisar quando é hora de descer na aeronave.",
 };
 
 export default function RootLayout({

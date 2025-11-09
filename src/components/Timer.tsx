@@ -72,7 +72,7 @@ export default function Timer() {
 
     return (
         <div className="bg-white/90 p-8 rounded-lg shadow-lg backdrop-blur-sm max-w-lg w-full">
-            <h1 className="text-3xl font-bold mb-8 text-gray-800 text-center">Cronômetro com Alarme</h1>
+            <h1 className="text-3xl font-bold mb-8 text-gray-800 text-center">TEMPO PARA O TOD</h1>
             
             <div className="flex gap-2 justify-center mb-6">
                 <input
