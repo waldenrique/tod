@@ -9,7 +9,7 @@ export default function Timer() {
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
     const audioRef = useRef<HTMLAudioElement>(null);
-    const timerRef = useRef<NodeJS.Timeout>();
+    const timerRef = useRef<NodeJS.Timeout | undefined>(undefined);
 
     useEffect(() => {
         return () => {
