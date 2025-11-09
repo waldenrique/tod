@@ -71,8 +71,8 @@ export default function Timer() {
     };
 
     return (
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h1 className="text-3xl font-bold mb-8 text-gray-800">Cronômetro com Alarme</h1>
+        <div className="bg-white/90 p-8 rounded-lg shadow-lg backdrop-blur-sm max-w-lg w-full">
+            <h1 className="text-3xl font-bold mb-8 text-gray-800 text-center">Cronômetro com Alarme</h1>
             
             <div className="flex gap-2 justify-center mb-6">
                 <input
@@ -81,54 +81,54 @@ export default function Timer() {
                     max="23"
                     value={hours}
                     onChange={(e) => setHours(Math.min(23, Math.max(0, parseInt(e.target.value) || 0)))}
-                    className="w-20 p-2 text-xl text-center border rounded"
+                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                     placeholder="Horas"
                 />
-                <span className="text-2xl">:</span>
+                <span className="text-2xl flex items-center text-gray-600 font-medium">:</span>
                 <input
                     type="number"
                     min="0"
                     max="59"
                     value={minutes}
                     onChange={(e) => setMinutes(Math.min(59, Math.max(0, parseInt(e.target.value) || 0)))}
-                    className="w-20 p-2 text-xl text-center border rounded"
+                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                     placeholder="Min"
                 />
-                <span className="text-2xl">:</span>
+                <span className="text-2xl flex items-center text-gray-600 font-medium">:</span>
                 <input
                     type="number"
                     min="0"
                     max="59"
                     value={seconds}
                     onChange={(e) => setSeconds(Math.min(59, Math.max(0, parseInt(e.target.value) || 0)))}
-                    className="w-20 p-2 text-xl text-center border rounded"
+                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                     placeholder="Seg"
                 />
             </div>
 
-            <div className="flex gap-4 justify-center mb-6">
+            <div className="flex gap-4 justify-center mb-8">
                 <button
                     onClick={startTimer}
                     disabled={isRunning}
-                    className="px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600 disabled:opacity-50"
+                    className="px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 disabled:opacity-50 font-medium transition-colors shadow-md hover:shadow-lg"
                 >
                     Iniciar
                 </button>
                 <button
                     onClick={stopTimer}
-                    className="px-6 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                    className="px-8 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 font-medium transition-colors shadow-md hover:shadow-lg"
                 >
                     Parar
                 </button>
                 <button
                     onClick={resetTimer}
-                    className="px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                    className="px-8 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-medium transition-colors shadow-md hover:shadow-lg"
                 >
                     Reiniciar
                 </button>
             </div>
 
-            <div className="text-5xl font-bold text-gray-800">
+            <div className="text-6xl font-bold text-gray-800 text-center bg-gray-50 py-6 rounded-lg shadow-inner">
                 {updateDisplay(timeLeft)}
             </div>
 
