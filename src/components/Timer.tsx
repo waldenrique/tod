@@ -81,7 +81,7 @@ export default function Timer() {
                     max="23"
                     value={hours}
                     onChange={(e) => setHours(Math.min(23, Math.max(0, parseInt(e.target.value) || 0)))}
-                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 text-gray-900 font-medium placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                     placeholder="Horas"
                 />
                 <span className="text-2xl flex items-center text-gray-600 font-medium">:</span>
@@ -91,7 +91,7 @@ export default function Timer() {
                     max="59"
                     value={minutes}
                     onChange={(e) => setMinutes(Math.min(59, Math.max(0, parseInt(e.target.value) || 0)))}
-                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 text-gray-900 font-medium placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                     placeholder="Min"
                 />
                 <span className="text-2xl flex items-center text-gray-600 font-medium">:</span>
@@ -101,7 +101,7 @@ export default function Timer() {
                     max="59"
                     value={seconds}
                     onChange={(e) => setSeconds(Math.min(59, Math.max(0, parseInt(e.target.value) || 0)))}
-                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                    className="w-24 p-3 text-xl text-center border rounded bg-gray-50 text-gray-900 font-medium placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent"
                     placeholder="Seg"
                 />
             </div>
